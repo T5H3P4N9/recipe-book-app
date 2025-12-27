@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.phone {
+  min-height: 100vh; 
+  background: #fff;
+  box-shadow: none; 
+  position: relative;
+  border-radius: 0;
+  object-fit: contain;
+  
+}
+
+/* Home Screen Styles */
+.home-screen {
+  padding: 40px 24px 100px;
+  min-height: 100vh;
+  
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.header img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#heading{
+  color: #4caf50;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.greeting {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #999;
+}
+
+.search-icon,
+.mic-icon {
+  width: 20px;
+  height: 20px;
+  color: #999;
+}
+
+.search-icon {
+  margin-right: 12px;
+}
+
+.category-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.category-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+}
+
+.pill {
+  padding: 10px 22px;
+  border-radius: 20px;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.pill.active {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: #fff;
+}
+
+.pill:hover:not(.active) {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.see-all {
+  font-size: 14px;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.recipe-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.recipe-card.yellow {
+  background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+
+}
+
+.recipe-card.yellow:hover{
+  font-size:30px;
+  background: linear-gradient(135deg, #e6d010 0%, #856402 100%);
+
+}
+
+.recipe-card.green {
+  background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+}
+
+.recipe-card.green:hover{
+  font-size:30px ;
+  background: linear-gradient(135deg, #07c90d 0%, #036b06 100%);
+
+}
+
+.recipe-info {
+  flex: 1;
+}
+
+.recipe-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  max-width: 160px;
+}
+
+.time-badge {
+  display: inline-block;
+  background: #4caf50;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.recipe-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+.recipe-link a {
+  font-weight: 600;
+}
+
+.recipe-link:hover a {
+  color: #4caf50;
+}
+
+.recipe-link i {
+  width: 16px;
+  height: 16px;
+  font-weight: 600;
+
+ 
+}
+
+.recipe-link a {
+  text-decoration: none;
+  color: #666;
+  background-color: White;
+  border-radius:12px;
+  padding: 5px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+  position: relative;
+}
+
+.recipe-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 24px 28px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #999;
+  font-size: 12px;
+}
+
+.nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item.active {
+  color: #4caf50;
+}
+
+
+.detail-image {
+  position: relative;
+  height: 260px;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back-btn,
+.more-btn {
+  position: absolute;
+  top: 50px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color:black;
+}
+
+.back-btn {
+  left: 20px;
+}
+
+.more-btn {
+  right: 20px;
+}
+
+.back-btn svg,
+.more-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #333;
+}
+
+.detail-content {
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  margin-top: -30px;
+  position: relative;
+  padding: 28px 24px 100px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.detail-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  max-width: 220px;
+  line-height: 1.3;
+}
+
+.time-badge.large {
+  font-size: 12px;
+  padding: 8px 14px;
+}
+
+.nutritions h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+
+
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.nutrition-item {
+  text-align: left;
+}
+
+.nutrition-item .label {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.nutrition-item .value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.nutrition-item .icon {
+  font-size: 16px;
+}
+
+.recipe-steps h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.ingredients{
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+.quick-steps {
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-indicator .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.step-indicator .circle.filled {
+  border-color: #4caf50;
+  background: #4caf50;
+}
+
+.step-indicator .line {
+  width: 2px;
+  flex: 1;
+  min-height: 40px;
+  background: #e0e0e0;
+  margin: 4px 0;
+}
+
+.step.completed .step-indicator .line {
+  background: #4caf50;
+}
+
+.step-content {
+  padding-bottom: 16px;
+}
+
+.step-content h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.step-content p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.video-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-btn:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 12px 30px rgba(76, 175, 80, 0.45);
+}
+
+.video-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Make the detail screen fill the entire viewport and be scrollable */
+.phone-detail-screen {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Make the home screen fill the entire viewport and be scrollable */
+.phone.home-screen {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px 120px; /* preserve original padding and keep space for bottom nav */
+  -webkit-overflow-scrolling: touch;
+  
+}
+
+/* Keep the bottom navigation fixed within the viewport for the home screen */
+.phone.home-screen .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Use responsive height for the header image so it scales to the viewport */
+.detail-image {
+  height: 38vh;
+  min-height: 220px;
+  max-height: 48vh;
+}
+
+/* Let the detail content grow and scroll while keeping space for the bottom button */
+.detail-content {
+  flex: 1 0 auto;
+  padding-bottom: 120px; /* keep space for the video button */
+  overflow: auto;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.forms input,
+.forms textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.forms input:focus,
+.forms textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.forms button {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.forms button:hover {
+  background-color: #45a049;
+}
+
+html, body {
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  .detail-image { height: 420px; }
+  .detail-content { padding-bottom: 120px; }
+}

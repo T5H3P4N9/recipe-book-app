@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="recipe-app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <favicon href="images/logo-2.png" type="image/png"/>
+</head>
+<body>
+  <div class="app-container">
+    <div class="phone home-screen">
+      <div class="header">
+        <img src="images/logo-1.png" alt="logo-image" class="logo">
+        <div id="heading"><h1>SA Recipe Book </h1></div>
+      </div>
+      
+      <h1 class="title">Traditional and popular dishes enjoyed by all!</h1>
+      <section>
+        <h2 id="heading">Welcome</h2>
+        <p>Discover a collection of beloved South African recipes that bring the flavors of home to your kitchen.
+           From hearty stews to delicious breads, explore traditional dishes that have been cherished for generations.
+            Whether you're a seasoned cook or just starting out, our recipe book offers something for everyone.
+             Let's get cooking and celebrate the rich culinary heritage of South Africa!</p>
+      </section>
+      <br/>
+      
+      <div class="category-section">
+        <h3>Category</h3>
+        <div class="category-pills">
+          <a href="index.html"><button class="pill">All</button></a>
+          <a href="home-1.html"><button class="pill">Meat Dishes</button></a>
+          <a href="home-2.html"><button class="pill">Veget..</button></a>
+          <a href="home-3.html"><button class="pill active">Staples</button></a>
+        </div>
+      </div>
+      
+      <div class="popular-section">
+        <div class="section-header">
+          <h3>Popular Recipe</h3>
+          <a href="index.html" class="see-all">See All</a>
+        </div>
+        
+        <div class="recipe-card yellow">
+          <div class="recipe-info">
+            <h4>Chakalaka,Pap and Steak</h4>
+            <span class="time-badge">45-60 MIN</span>
+            <div class="recipe-link"> <a href="recipe1.html">Recipe <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a></div>
+          </div>
+          <div class="recipe-image">
+            <img src="images/pap,-chakalaka-and-steak.jpg" alt="Chakalaka,Pap and Steak">
+            <button class="save-btn" aria-label="Save"><i class="fa-solid fa-bookmark" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div class="recipe-card green">
+          <div class="recipe-info">
+            <h4>Vetkoek and mince</h4>
+            <span class="time-badge">30-45 MIN</span>
+            <div class="recipe-link"> <a href="recipe4.html">Recipe <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a></div>
+          </div>
+          <div class="recipe-image">
+            <img src="images/vetkoek-and-mince.jpg" alt="Vetkoek and mince">
+            <button class="save-btn" aria-label="Save"><i class="fa-solid fa-bookmark" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div class="recipe-card yellow">
+          <div class="recipe-info">
+            <h4>Steamed Bread</h4>
+            <span class="time-badge">3hrs MIN</span>
+            <div class="recipe-link"> <a href="recipe7.html">Recipe <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a></div>
+          </div>
+          <div class="recipe-image">
+            <img src="images/Steam-Bread.jpg" alt="Steamed Bread">
+            <button class="save-btn" aria-label="Save"><i class="fa-solid fa-bookmark" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+          <span>Home</span>
+        </a>
+        <a href="about.html" class="nav-item">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span>About</span>
+        </a>
+        <a href="saves.html" class="nav-item">
+          <i class="fa-solid fa-bookmark" aria-hidden="true"></i>
+          <span>Saves</span>
+        </a>
+        <a href="contact.html" class="nav-item">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
